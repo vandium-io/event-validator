@@ -30,11 +30,11 @@ var lov = require( 'lov' );
 
 let schema = {
 
-    id: lov.string().uuid().trim().required(),
+    id: lov.string().uuid().required(),
 
-    name: lov.string().min( 1 ).max( 100 ).required(),
+    name: lov.string().trim().min(1).max(100).required(),
 
-    age: lov.number().min( 0 ).max( 120 ),
+    age: lov.number().min(0).max(120),
 
     address: lov.object().keys( {
 
